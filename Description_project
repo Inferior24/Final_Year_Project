@@ -1,0 +1,71 @@
+This project is a Retrieval-Augmented Generation (RAG) prototype built using FAISS as the vector database and a lightweight LLM (through Ollama / Hugging Face / LangChain).
+The goal is to experiment with embeddings, retrieval, and response generation to understand how RAG pipelines actually work.
+
+Rather than building the entire pipeline in one go, the focus (Sept 12–13) is on:
+
+Setting up the environment
+
+Generating embeddings from a sample dataset (e.g., text corpus, small JSON, or CSV)
+
+Indexing embeddings in FAISS
+
+Running a basic retrieval query
+
+🛠️ Tech Stack
+
+Python 3.10+
+
+FAISS (Facebook AI Similarity Search) – for vector indexing & retrieval
+
+LangChain – to connect embeddings, retrieval, and generation
+
+LLM Provider:
+
+Ollama
+ (local) or
+
+Hugging Face Transformers
+ (cloud/local)
+
+Database (optional, future): MongoDB for metadata storage
+
+📅 Timeline
+🔹 Phase 1: Progress Days (Sept 12–13)
+
+✅ Install FAISS & verify installation
+
+✅ Create a Python script to generate embeddings for sample text data
+
+✅ Store embeddings in a FAISS index
+
+✅ Perform similarity search (e.g., top-3 most similar sentences)
+
+✅ Document errors, learnings, and fixes
+
+👉 AI tools to assist here:
+
+Use ChatGPT for debugging code errors and designing function structure
+
+Use GitHub Copilot / Cursor AI for quick function autocompletions
+
+Use Claude / ChatGPT for summarizing concepts (FAISS indexing, embeddings)
+
+🔹 Phase 2: Understanding & Documentation (Sept 18–19)
+
+Write detailed notes on:
+
+How FAISS indexing works
+
+How embeddings are generated
+
+How retrieval integrates with generation
+
+Document your workflow (with code snippets + diagrams)
+
+🔹 Phase 3: Presentation (Sept 20, Saturday)
+
+Prepare slides (Google Slides / PPT)
+
+Demo simple retrieval example
+
+Explain concepts with visuals instead of heavy code
