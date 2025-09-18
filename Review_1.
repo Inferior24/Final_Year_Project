@@ -1,0 +1,61 @@
+# Review 1 [Discussion]
+## 1. Project Setup
+
+Repository & Environment
+Created GitHub repository for version control and collaboration.
+Set up Python virtual environment.
+Installed key dependencies:
+FastAPI → Web framework for API endpoints.
+LangChain → For RAG pipeline orchestration.
+FAISS → Vector database for similarity search.
+SentenceTransformers → Embeddings model (all-MiniLM-L6-v2).
+PyPDF → PDF ingestion support.
+
+## 2. Core RAG Pipeline – Document Ingestion
+
+PDF Ingestion + Chunking
+Implemented ingestion pipeline using PyPDF + LangChain text splitter.
+
+### configured chunking parameters:
+
+Chunk size: 500 tokens
+Overlap: 50 tokens
+
+### Verification
+
+#### Collected chunk statistics:
+
+Number of chunks generated.
+Average chunk size.
+Overlap validation.
+Confirmed processed chunks saved for indexing.
+
+## 3. Embeddings + Vector Index
+
+### Embeddings
+
+#### Note: We are testing with Ollama Open Source Models.
+Used all-MiniLM-L6-v2 (lightweight + efficient).
+Generated embeddings for all document chunks.
+
+### FAISS Vector Store
+
+Built FAISS index and stored it in data/faiss_index.
+Implemented functionality to save + reload index.
+Ran first retrieval queries to confirm similarity search is working.
+
+## hourglass_flowing_sand: In Progress (Started, but not complete)
+
+Retrieval-Augmented QA (RAG QA)
+Integration: Connected FAISS retriever with LLM (OpenAI GPT-4o-mini demo).
+FastAPI /query endpoint: Accepts natural language question → returns answer using retrieved chunks.
+Testing: Verified initial responses via Postman & curl.
+
+#### Note: Core flow works, but additional endpoints and improvements are pending.
+
+## Upcoming (Planned for Day 4–7 of Week 1)
+
+Add /search endpoint → return top-k documents.
+Add /recommend endpoint → rank APIs using TOPSIS (MCDM) with toy dataset.
+Write pytest unit tests for endpoints.
+
